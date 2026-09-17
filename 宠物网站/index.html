@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陪它回家 · Home for Paws</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">
+        <div class="brand-mark">🐾</div>
+        <div class="brand-text">
+          <div class="cn">陪它回家</div>
+          <div class="en">HOME&nbsp;FOR&nbsp;PAWS</div>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#top" class="active">首页</a>
+        <a href="#pets">等待领养</a>
+        <a href="#process">保护行动</a>
+        <a href="#our-story">我们的故事</a>
+        <a href="#help">如何帮助</a>
+        <a href="#" id="openReportBtn" class="nav-report-link">救援报告</a>
+      </nav>
+      <a href="#" class="btn btn-primary nav-cta" id="navAdoptBtn">我要领养</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#top">首页</a>
+      <a href="#pets">等待领养</a>
+      <a href="#process">保护行动</a>
+      <a href="#our-story">我们的故事</a>
+      <a href="#help">如何帮助</a>
+      <a href="#" id="openReportBtnMobile" class="nav-report-link">救援报告</a>
+      <a href="#" class="btn btn-primary" id="mobileAdoptBtn">我要领养</a>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <div id="top" class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <h1>每一个生命，<br>都值得被温柔以待。</h1>
+        <p>我们救助流浪动物，提供医疗、照护与庇护，为它们找到一个真正的家。</p>
+        <div class="hero-actions">
+          <a href="#pets" class="btn btn-primary btn-pulse">看看谁在等家 🐾</a>
+          <a href="#our-story" class="btn btn-ghost">了解我们的故事 ♡</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="https://placedog.net/900/740?id=15" alt="等待领养的小狗">
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="stat-icon c1">🐾</div><div><div class="stat-num">128</div><div class="stat-label">已救助动物</div></div></div>
+      <div class="stat"><div class="stat-icon c2">🏠</div><div><div class="stat-num">96</div><div class="stat-label">已成功领养</div></div></div>
+      <div class="stat"><div class="stat-icon c3">❤</div><div><div class="stat-num">32</div><div class="stat-label">正在照护中</div></div></div>
+      <div class="stat"><div class="stat-icon c4">👥</div><div><div class="stat-num">58</div><div class="stat-label">爱心志愿者</div></div></div>
+    </div>
+  </div>
+
+  <!-- PETS -->
+  <section id="pets">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>等待领养的毛孩子</h2>
+      </div>
+
+      <div class="pet-filters" id="petFilters">
+        <button class="filter-chip active" data-filter="all">全部</button>
+        <button class="filter-chip" data-filter="dog">狗狗</button>
+        <button class="filter-chip" data-filter="cat">猫咪</button>
+      </div>
+
+      <div class="pet-grid" id="petGrid">
+
+        <div class="pet-card" data-species="dog" data-bio="小太阳性格开朗，见到人会摇尾巴讨抱抱，是志愿者公认的&ldquo;开心果&rdquo;，很适合有小朋友的家庭。">
+          <div class="pet-photo"><span class="pet-badge">狗狗</span><img src="https://placedog.net/500/500?id=3" alt="小太阳"></div>
+          <div class="pet-info">
+            <div class="pet-name">小太阳 <span class="m">♂</span></div>
+            <div class="pet-meta">约 1 岁 · 已绝育 · 亲人可爱</div>
+            <button class="pet-more">♡ 了解更多</button>
+          </div>
+        </div>
+
+        <div class="pet-card" data-species="cat" data-bio="奶茶喜欢窝在人腿上打盹，偶尔会用头蹭蹭表达喜欢，适合能常常在家的主人。">
+          <div class="pet-photo"><span class="pet-badge cat">猫咪</span><img src="https://cataas.com/cat?width=500&height=500&fit=cover" alt="奶茶"></div>
+          <div class="pet-info">
+            <div class="pet-name">奶茶 <span class="f">♀</span></div>
+            <div class="pet-meta">约 8 个月 · 已绝育 · 活泼粘人</div>
+            <button class="pet-more">♡ 了解更多</button>
+          </div>
+        </div>
+
+        <div class="pet-card" data-species="dog" data-bio="黑豆聪明伶俐，简单口令一学就会，散步时会乖乖跟在旁边，不拉扯牵引绳。">
+          <div class="pet-photo"><span class="pet-badge">狗狗</span><img src="https://placedog.net/500/501?id=8" alt="黑豆"></div>
+          <div class="pet-info">
+            <div class="pet-name">黑豆 <span class="m">♂</span></div>
+            <div class="pet-meta">约 2 岁 · 已绝育 · 聪明亲人</div>
+            <button class="pet-more">♡ 了解更多</button>
+          </div>
+        </div>
+
+        <div class="pet-card" data-species="cat" data-bio="布丁比较安静内敛，需要一点时间熟悉新环境，一旦放下戒心会非常黏人。">
+          <div class="pet-photo"><span class="pet-badge cat">猫咪</span><img src="https://cataas.com/cat?width=501&height=501&fit=cover" alt="布丁"></div>
+          <div class="pet-info">
+            <div class="pet-name">布丁 <span class="f">♀</span></div>
+            <div class="pet-meta">约 1 岁 · 已绝育 · 安静乖巧</div>
+            <button class="pet-more">♡ 了解更多</button>
+          </div>
+        </div>
+
+        <div class="pet-card" data-species="dog" data-bio="大黄警觉性高，对陌生人会先观察，但认主之后非常忠诚，适合有院子的家庭。">
+          <div class="pet-photo"><span class="pet-badge">狗狗</span><img src="https://placedog.net/500/500?id=12" alt="大黄"></div>
+          <div class="pet-info">
+            <div class="pet-name">大黄 <span class="m">♂</span></div>
+            <div class="pet-meta">约 3 岁 · 已绝育 · 忠诚护主</div>
+            <button class="pet-more">♡ 了解更多</button>
+          </div>
+        </div>
+
+        <div class="pet-card" data-species="cat" data-bio="小灰精力旺盛，很喜欢逗猫棒和纸箱，适合家里有猫爬架或愿意常陪它玩的主人。">
+          <div class="pet-photo"><span class="pet-badge cat">猫咪</span><img src="https://cataas.com/cat?width=502&height=502&fit=cover" alt="小灰"></div>
+          <div class="pet-info">
+            <div class="pet-name">小灰 <span class="m">♂</span></div>
+            <div class="pet-meta">约 6 个月 · 已绝育 · 好奇爱玩</div>
+            <button class="pet-more">♡ 了解更多</button>
+          </div>
+        </div>
+
+        <div class="pet-card" data-species="dog" data-bio="旺财还在恢复对人的信任，进食和睡眠都很规律，需要一位有耐心的主人慢慢陪伴。">
+          <div class="pet-photo"><span class="pet-badge">狗狗</span><img src="https://placedog.net/500/500?id=20" alt="旺财"></div>
+          <div class="pet-info">
+            <div class="pet-name">旺财 <span class="m">♂</span></div>
+            <div class="pet-meta">约 4 个月 · 待绝育 · 精力充沛</div>
+            <button class="pet-more">♡ 了解更多</button>
+          </div>
+        </div>
+
+        <div class="pet-card" data-species="cat" data-bio="三花比较怕生，刚开始可能会躲起来，熟悉后会主动窝在你身边，需要多一点耐心。">
+          <div class="pet-photo"><span class="pet-badge cat">猫咪</span><img src="https://cataas.com/cat?width=503&height=503&fit=cover" alt="三花"></div>
+          <div class="pet-info">
+            <div class="pet-name">三花 <span class="f">♀</span></div>
+            <div class="pet-meta">约 2 岁 · 已绝育 · 温柔怕生</div>
+            <button class="pet-more">♡ 了解更多</button>
+          </div>
+        </div>
+
+        <div class="pet-card" data-species="dog" data-bio="豆豆正处在活泼调皮的年纪，精力充沛，比较适合能经常遛它、陪它玩耍的家庭。">
+          <div class="pet-photo"><span class="pet-badge">狗狗</span><img src="https://placedog.net/500/500?id=45" alt="豆豆"></div>
+          <div class="pet-info">
+            <div class="pet-name">豆豆 <span class="m">♂</span></div>
+            <div class="pet-meta">约 5 个月 · 待绝育 · 活泼调皮</div>
+            <button class="pet-more">♡ 了解更多</button>
+          </div>
+        </div>
+
+        <div class="pet-card" data-species="cat" data-bio="糯米有点小傲娇，喜欢按自己的节奏来，但对信任的人会露出软萌的一面。">
+          <div class="pet-photo"><span class="pet-badge cat">猫咪</span><img src="https://cataas.com/cat?width=504&height=504&fit=cover" alt="糯米"></div>
+          <div class="pet-info">
+            <div class="pet-name">糯米 <span class="f">♀</span></div>
+            <div class="pet-meta">约 1 岁 · 已绝育 · 高冷傲娇</div>
+            <button class="pet-more">♡ 了解更多</button>
+          </div>
+        </div>
+
+        <div class="pet-card" data-species="dog" data-bio="阿福年纪较大，性格沉稳安静，不需要太多运动量，很适合想要一只&ldquo;老伴&rdquo;的家庭。">
+          <div class="pet-photo"><span class="pet-badge">狗狗</span><img src="https://placedog.net/500/500?id=58" alt="阿福"></div>
+          <div class="pet-info">
+            <div class="pet-name">阿福 <span class="m">♂</span></div>
+            <div class="pet-meta">约 6 岁 · 已绝育 · 安静稳重</div>
+            <button class="pet-more">♡ 了解更多</button>
+          </div>
+        </div>
+
+        <div class="pet-card" data-species="cat" data-bio="咖啡很粘人，喜欢跟前跟后，晚上还会主动上床找主人一起睡。">
+          <div class="pet-photo"><span class="pet-badge cat">猫咪</span><img src="https://cataas.com/cat?width=505&height=505&fit=cover" alt="咖啡"></div>
+          <div class="pet-info">
+            <div class="pet-name">咖啡 <span class="m">♂</span></div>
+            <div class="pet-meta">约 3 岁 · 已绝育 · 粘人爱撒娇</div>
+            <button class="pet-more">♡ 了解更多</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="dots" id="petDots"></div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="process-alt">
+    <div class="wrap">
+      <h2 style="margin-bottom:42px;">我们如何保护它们</h2>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-icon">🩹</div>
+          <h3>发现与救助</h3>
+          <p>在街头、社区或求助中发现需要帮助的动物</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">🩺</div>
+          <h3>医疗与照护</h3>
+          <p>提供必要的医疗、绝育和日常照护</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">🏡</div>
+          <h3>找到合适的家</h3>
+          <p>严格筛选领养家庭，确保它们幸福生活</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">🤝</div>
+          <h3>长期陪伴与支持</h3>
+          <p>领养后持续关注，提供帮助与支持</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY / TIMELINE -->
+  <section id="our-story">
+    <div class="wrap">
+      <h2 style="margin-bottom:12px;">我们的故事</h2>
+      <p class="story-lede">从一个人收留一只猫开始，到今天一支 58 人的志愿者队伍——这是我们陪流浪动物走过的路。</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot">🐾</div>
+          <div class="timeline-card">
+            <div class="timeline-year">2017</div>
+            <h3>一个人的开始</h3>
+            <p>创始人在小区里收养了第一只流浪猫，从此开始留意身边需要帮助的动物。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">🏚️</div>
+          <div class="timeline-card">
+            <div class="timeline-year">2018</div>
+            <h3>建立临时救助点</h3>
+            <p>联合几位邻居租下一间小屋，作为流浪动物暂时的庇护所，开始有组织地救助。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">🩺</div>
+          <div class="timeline-card">
+            <div class="timeline-year">2020</div>
+            <h3>医疗合作启动</h3>
+            <p>与本地兽医诊所建立长期合作，规范绝育与疫苗流程，让每一次救助都更专业。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">🤝</div>
+          <div class="timeline-card">
+            <div class="timeline-year">2022</div>
+            <h3>志愿者团队成长</h3>
+            <p>志愿者从最初的 5 人发展到 58 人，覆盖日常喂养、接送就医、领养家访等各个环节。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">❤</div>
+          <div class="timeline-card">
+            <div class="timeline-year">2026 · 现在</div>
+            <h3>128 个生命被改变</h3>
+            <p>已累计救助 128 只流浪动物，96 只成功找到新家，这条路我们会继续走下去。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORIES + CTA -->
+  <section id="stories">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>救援故事</h2>
+      </div>
+
+      <div class="stories-shell">
+        <button class="story-nav prev" id="storyPrev" aria-label="上一个">‹</button>
+        <button class="story-nav next" id="storyNext" aria-label="下一个">›</button>
+
+        <div class="stories-scroll" id="storiesScroll">
+          <div class="story-card">
+            <div class="story-photos">
+              <img class="before" src="https://placedog.net/300/188?id=41" alt="阿黄救助前">
+              <img src="https://placedog.net/300/188?id=42" alt="阿黄康复后">
+              <div class="story-arrow">→</div>
+            </div>
+            <div class="story-body">
+              <div class="story-title">断腿的"阿黄"重获新生</div>
+              <div class="story-excerpt">在雨天被发现时无法站立，经过手术和照护，如今已经找到温暖的家。</div>
+              <div class="story-date">2026-04-20</div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-photos">
+              <img class="before" src="https://cataas.com/cat?width=300&height=188&fit=cover" alt="小橘救助前">
+              <img src="https://cataas.com/cat?width=301&height=188&fit=cover" alt="小橘康复后">
+              <div class="story-arrow">→</div>
+            </div>
+            <div class="story-body">
+              <div class="story-title">小橘的逆袭</div>
+              <div class="story-excerpt">瘦弱的小橘曾差点熬不过那个冬天，现在的它活泼亲人，深受领养家庭宠爱。</div>
+              <div class="story-date">2026-03-12</div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-photos">
+              <img class="before" src="https://cataas.com/cat?width=301&height=188&fit=cover&s=2" alt="小灰救助前">
+              <img src="https://cataas.com/cat?width=302&height=188&fit=cover&s=2" alt="小灰康复后">
+              <div class="story-arrow">→</div>
+            </div>
+            <div class="story-body">
+              <div class="story-title">失明的"小灰"学会了信任</div>
+              <div class="story-excerpt">曾因眼疾几乎失明，经过手术恢复部分视力，现在靠气味和声音也能活得自在。</div>
+              <div class="story-date">2026-02-08</div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-photos">
+              <img class="before" src="https://placedog.net/300/188?id=52" alt="旺财救助前">
+              <img src="https://placedog.net/300/188?id=53" alt="旺财康复后">
+              <div class="story-arrow">→</div>
+            </div>
+            <div class="story-body">
+              <div class="story-title">"旺财"从怕人到粘人</div>
+              <div class="story-excerpt">被发现时极度怕人，不敢靠近任何人，如今已经能主动蹭志愿者的手心。</div>
+              <div class="story-date">2026-01-15</div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-photos">
+              <img class="before" src="https://placedog.net/300/188?id=70" alt="豆豆救助前">
+              <img src="https://placedog.net/300/188?id=71" alt="豆豆康复后">
+              <div class="story-arrow">→</div>
+            </div>
+            <div class="story-body">
+              <div class="story-title">三条腿的"豆豆"照样撒欢奔跑</div>
+              <div class="story-excerpt">车祸失去一条后腿，一度不敢下地，经过复健训练，如今跑起来一点也不比别的狗慢。</div>
+              <div class="story-date">2025-12-02</div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-photos">
+              <img class="before" src="https://cataas.com/cat?width=306&height=188&fit=cover" alt="糯米救助前">
+              <img src="https://cataas.com/cat?width=307&height=188&fit=cover" alt="糯米康复后">
+              <div class="story-arrow">→</div>
+            </div>
+            <div class="story-body">
+              <div class="story-title">垃圾桶边的"糯米"学会了撒娇</div>
+              <div class="story-excerpt">曾在垃圾桶边翻找食物，瘦得皮包骨，如今被悉心照料得圆滚滚，性格也变得爱撒娇。</div>
+              <div class="story-date">2025-11-18</div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-photos">
+              <img class="before" src="https://placedog.net/300/188?id=82" alt="阿福救助前">
+              <img src="https://placedog.net/300/188?id=83" alt="阿福康复后">
+              <div class="story-arrow">→</div>
+            </div>
+            <div class="story-body">
+              <div class="story-title">老年犬"阿福"也值得被爱</div>
+              <div class="story-excerpt">因为年纪大一直没人愿意领养，等待了近一年，终于遇到愿意陪它到老的家庭。</div>
+              <div class="story-date">2025-10-05</div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-photos">
+              <img class="before" src="https://cataas.com/cat?width=308&height=188&fit=cover" alt="咖啡救助前">
+              <img src="https://cataas.com/cat?width=309&height=188&fit=cover" alt="咖啡康复后">
+              <div class="story-arrow">→</div>
+            </div>
+            <div class="story-body">
+              <div class="story-title">猫妈妈"咖啡"和五只小猫一起获救</div>
+              <div class="story-excerpt">在工地角落发现时刚生完小猫，母子六口全部接回救助点，如今都已经找到了家。</div>
+              <div class="story-date">2025-09-22</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO HELP -->
+  <section id="help" class="process-alt">
+    <div class="wrap">
+      <h2 style="margin-bottom:12px;">如何帮助</h2>
+      <p class="story-lede">不需要很多，你的一点点参与，就能真正改变一只动物的处境。</p>
+
+      <div class="help-grid">
+        <div class="help-card">
+          <div class="help-icon">❤</div>
+          <h3>捐赠支持</h3>
+          <p>你的捐款会直接用于医疗、绝育和日常照护，每一笔都公开透明。</p>
+          <button class="btn btn-outline-clay help-card-btn" id="helpDonateBtn">立即捐赠</button>
+        </div>
+        <div class="help-card">
+          <div class="help-icon">🤝</div>
+          <h3>成为志愿者</h3>
+          <p>日常喂养、上门探访、活动支持……总有一种方式适合你的时间。</p>
+          <button class="btn btn-outline-clay help-card-btn" id="helpVolunteerBtn">立即报名</button>
+        </div>
+        <div class="help-card">
+          <div class="help-icon">📣</div>
+          <h3>分享领养信息</h3>
+          <p>转发一次，可能就是一只毛孩子被看见、被接回家的开始。</p>
+          <button class="btn btn-outline-clay help-card-btn" id="helpShareBtn">复制分享链接</button>
+        </div>
+      </div>
+
+      <div class="cta-banner" style="margin-top:36px;">
+        <div class="cta-text">
+          <h3>你的一份帮助，<br>会改变它的一生。</h3>
+          <p>爱心捐赠、志愿服务、分享领养信息，都是对它们最好的支持。</p>
+          <div class="cta-actions">
+            <a href="#" class="btn btn-white" id="donateBtn">立即捐赠</a>
+            <a href="#" class="btn btn-line" id="volunteerBtn">成为志愿者 🐾</a>
+          </div>
+        </div>
+        <div class="cta-photo"><img src="https://placedog.net/520/420?id=27" alt="被抚摸的金毛"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-about">
+        <div class="footer-brand">
+          <div class="brand-mark">🐾</div>
+          <div class="brand-text">
+            <div class="cn" style="color:#fff;">陪它回家</div>
+            <div class="en" style="color:#9C9284;">HOME&nbsp;FOR&nbsp;PAWS</div>
+          </div>
+        </div>
+        <p>一个独立的动物保护组织，致力于给流浪动物一个温暖的未来。</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>快速导航</h4>
+        <a href="#top">首页</a>
+        <a href="#pets">等待领养</a>
+        <a href="#process">保护行动</a>
+        <a href="#our-story">我们的故事</a>
+        <a href="#help">如何帮助</a>
+        <a href="#" id="footerReportBtn">救援报告</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>帮助与支持</h4>
+        <a href="#" class="help-link" data-topic="adoptInfo"><span class="hl-icon">🐾</span><span class="hl-text">领养流程</span><span class="hl-arrow">→</span></a>
+        <a href="#" class="help-link" data-topic="donate"><span class="hl-icon">❤</span><span class="hl-text">捐赠支持</span><span class="hl-arrow">→</span></a>
+        <a href="#" class="help-link" data-topic="volunteerInfo"><span class="hl-icon">🤝</span><span class="hl-text">志愿者指南</span><span class="hl-arrow">→</span></a>
+        <a href="#" class="help-link" data-topic="faq"><span class="hl-icon">❓</span><span class="hl-text">常见问题</span><span class="hl-arrow">→</span></a>
+      </div>
+
+      <div class="footer-col">
+        <h4>联系我们</h4>
+        <div class="contact-line"><span class="ic">✉</span> shubaizhiyuan@gmail.com</div>
+        <div class="contact-line"><span class="ic">☎</span> 011-2182 9419</div>
+        <div class="contact-line"><span class="ic">📍</span> 北京市朝阳区某某路 123 号</div>
+      </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+      <div>© 2024 陪它回家 HOME FOR PAWS. 保留所有权利。</div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+  <!-- CUSTOMER SERVICE CHAT WIDGET -->
+  <button class="chat-fab" id="chatFab" aria-label="打开在线客服" aria-expanded="false">
+    <span class="icon-chat">💬</span>
+    <span class="icon-close">×</span>
+    <span class="badge"></span>
+  </button>
+
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-head">
+      <div class="chat-head-pattern"></div>
+      <div class="chat-head-bokeh"></div>
+      <div class="chat-head-decor">
+        <span class="hd-star1">✦</span>
+        <span class="hd-star2">✦</span>
+        <span class="hd-heart">♥</span>
+      </div>
+      <div class="avatar-wrap">
+        <div class="avatar" style="background-image:url('https://placedog.net/100/100?id=15');"></div>
+        <span class="avatar-badge">🐾</span>
+      </div>
+      <div class="chat-head-info">
+        <div class="title" id="chatTitle">在线客服</div>
+      </div>
+      <div class="chat-head-actions">
+        <button class="chat-clear" id="chatClear" aria-label="清空聊天记录" title="清空聊天记录">
+          <span class="cc-icon cc-trash">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="3 6 5 6 21 6"></polyline>
+              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+              <line x1="10" y1="11" x2="10" y2="17"></line>
+              <line x1="14" y1="11" x2="14" y2="17"></line>
+            </svg>
+          </span>
+          <span class="cc-icon cc-check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div class="chat-lang" id="chatLang">
+      <button class="active" data-lang="zh">华语</button>
+      <button data-lang="ms">国语</button>
+      <button data-lang="en">英文</button>
+    </div>
+
+    <div class="chat-voice-row" id="chatVoiceRow">
+      <div class="chat-voice-select-wrap" id="chatVoiceWrap">
+        <button type="button" class="chat-voice-btn" id="chatVoiceBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span class="cv-btn-label" id="chatVoiceBtnLabel">默认声音</span>
+          <span class="cv-arrow">⌄</span>
+        </button>
+        <ul class="chat-voice-list" id="chatVoiceList" role="listbox"></ul>
+      </div>
+    </div>
+    <p class="chat-voice-note" id="chatVoiceNote" hidden></p>
+
+    <div class="chat-body" id="chatBody">
+      <div class="chat-msg bot">你好呀 👋 我是陪它回家的客服助手，有什么可以帮你的吗？可以直接点下面的问题，或者打字告诉我～</div>
+    </div>
+
+    <div class="chat-quick" id="chatQuick">
+      <button data-topic="adopt">领养流程</button>
+      <button data-topic="volunteer">志愿者报名</button>
+      <button data-topic="donate">捐赠方式</button>
+      <button data-topic="hours">工作时间</button>
+    </div>
+
+    <form class="chat-input-row" id="chatForm">
+      <button type="button" class="chat-mic" id="chatMic" aria-label="语音输入" title="语音输入" aria-pressed="false">
+        <span class="mic-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            <line x1="12" y1="19" x2="12" y2="23"></line>
+            <line x1="8" y1="23" x2="16" y2="23"></line>
+          </svg>
+        </span>
+        <span class="mic-wave"><i></i><i></i><i></i></span>
+      </button>
+      <input type="text" id="chatInput" placeholder="输入你的问题…" autocomplete="off">
+      <button type="submit" class="chat-send" aria-label="发送">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </form>
+  </div>
+
+  <!-- ADOPT MODAL -->
+  <div class="modal-overlay" id="adoptModal">
+    <div class="modal-box">
+      <button class="modal-close" data-close>&times;</button>
+      <div class="modal-head">
+        <div class="modal-icon">🐾</div>
+        <h3>领养申请</h3>
+        <p>填写下面的信息，我们会尽快与你联系，安排见面。</p>
+      </div>
+      <form class="modal-form" id="adoptForm">
+        <label>想要领养谁
+          <select name="pet" id="adoptPetSelect">
+            <option value="">请选择一只毛孩子</option>
+            <option>小太阳</option>
+            <option>奶茶</option>
+            <option>黑豆</option>
+            <option>布丁</option>
+            <option>大黄</option>
+            <option>小灰</option>
+            <option>旺财</option>
+            <option>三花</option>
+            <option>豆豆</option>
+            <option>糯米</option>
+            <option>阿福</option>
+            <option>咖啡</option>
+            <option>还没决定，请帮我推荐</option>
+          </select>
+        </label>
+        <label>你的姓名
+          <input type="text" name="name" placeholder="请输入姓名" required>
+        </label>
+        <label>联系电话
+          <input type="tel" name="phone" placeholder="请输入手机号" required>
+        </label>
+        <label>居住城市
+          <input type="text" name="city" placeholder="例如：北京市朝阳区">
+        </label>
+        <label>想对我们说的话
+          <textarea name="message" rows="3" placeholder="家里有没有养过宠物、居住环境等（选填）"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary modal-submit" id="adoptSubmitBtn">提交申请</button>
+        <p class="modal-form-error" id="adoptFormError" hidden></p>
+      </form>
+      <div class="modal-success" id="adoptSuccess">
+        <div class="modal-icon">🏠</div>
+        <h3>申请已收到！</h3>
+        <p>感谢你愿意给<span id="adoptSuccessName">它</span>一个家，我们会在 1-2 个工作日内联系你，请保持电话畅通。</p>
+        <button type="button" class="btn btn-primary modal-submit" data-close>好的，知道了</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- VOLUNTEER MODAL -->
+  <div class="modal-overlay" id="volunteerModal">
+    <div class="modal-box">
+      <button class="modal-close" data-close>&times;</button>
+      <div class="modal-head">
+        <div class="modal-icon">🤝</div>
+        <h3>成为志愿者</h3>
+        <p>无论是日常照护、上门探访还是线上宣传，都需要你的一份力量。</p>
+      </div>
+      <form class="modal-form" id="volunteerForm">
+        <label>你的姓名
+          <input type="text" name="name" placeholder="请输入姓名" required>
+        </label>
+        <label>联系电话
+          <input type="tel" name="phone" placeholder="请输入手机号" required>
+        </label>
+        <label>感兴趣的志愿服务
+          <select name="type">
+            <option>日常喂养 / 清洁照护</option>
+            <option>上门探访 / 中途寄养</option>
+            <option>线上宣传 / 领养信息发布</option>
+            <option>活动策划 / 现场支持</option>
+            <option>其他，我会在留言里说明</option>
+          </select>
+        </label>
+        <label>每周可以投入的时间
+          <select name="time">
+            <option>1-2 小时</option>
+            <option>3-5 小时</option>
+            <option>5 小时以上</option>
+          </select>
+        </label>
+        <label>留言（选填）
+          <textarea name="message" rows="3" placeholder="有相关经验或想说的话都可以写在这里"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary modal-submit" id="volunteerSubmitBtn">提交报名</button>
+        <p class="modal-form-error" id="volunteerFormError" hidden></p>
+      </form>
+      <div class="modal-success" id="volunteerSuccess">
+        <div class="modal-icon">💛</div>
+        <h3>报名成功！</h3>
+        <p>谢谢你愿意加入我们，志愿者协调员会尽快与你联系，安排具体的服务时间。</p>
+        <button type="button" class="btn btn-primary modal-submit" data-close>好的，知道了</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DONATE MODAL -->
+  <div class="modal-overlay" id="donateModal">
+    <div class="modal-box">
+      <button class="modal-close" data-close>&times;</button>
+      <div class="modal-head">
+        <div class="modal-icon">❤</div>
+        <h3>爱心捐赠</h3>
+        <p>你的每一份捐赠，都会直接用于医疗、绝育和日常照护。</p>
+      </div>
+      <form class="modal-form" id="donateForm">
+        <label>选择捐赠金额</label>
+        <div class="amount-grid" id="amountGrid">
+          <button type="button" class="amount-chip" data-amount="20">¥20</button>
+          <button type="button" class="amount-chip" data-amount="50">¥50</button>
+          <button type="button" class="amount-chip active" data-amount="100">¥100</button>
+          <button type="button" class="amount-chip" data-amount="200">¥200</button>
+          <button type="button" class="amount-chip" data-amount="500">¥500</button>
+          <button type="button" class="amount-chip is-custom" data-amount="custom">自定义</button>
+        </div>
+        <input type="number" id="customAmount" class="custom-amount-input" placeholder="输入自定义金额（元）" min="1" style="display:none;">
+        <label>捐赠人姓名（选填）
+          <input type="text" name="name" placeholder="留空则匿名捐赠">
+        </label>
+        <label>联系方式（选填，便于寄送收据）
+          <input type="text" name="contact" placeholder="手机号或邮箱">
+        </label>
+        <button type="submit" class="btn btn-primary modal-submit">确认捐赠 <span id="donateAmountLabel">¥100</span></button>
+      </form>
+      <div class="modal-success" id="donateSuccess">
+        <div class="modal-icon">🌟</div>
+        <h3>感谢你的爱心！</h3>
+        <p>你捐赠的 <strong id="donateSuccessAmount">¥100</strong> 将用于流浪动物的医疗与日常照护，谢谢你的支持。</p>
+        <button type="button" class="btn btn-primary modal-submit" data-close>好的，知道了</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- REPORT MODAL -->
+  <div class="modal-overlay" id="reportModal">
+    <div class="modal-box wide">
+      <button class="modal-close" data-close>&times;</button>
+      <div class="modal-head">
+        <div class="modal-icon">📋</div>
+        <h3>2026 救援报告</h3>
+        <p>公开、透明是我们对每一位支持者的承诺。</p>
+      </div>
+      <div class="report-stats">
+        <div class="report-stat"><div class="num">128</div><div class="lbl">累计救助动物</div></div>
+        <div class="report-stat"><div class="num">96</div><div class="lbl">成功领养家庭</div></div>
+        <div class="report-stat"><div class="num">32</div><div class="lbl">目前仍在照护</div></div>
+        <div class="report-stat"><div class="num">58</div><div class="lbl">活跃志愿者</div></div>
+      </div>
+      <div class="report-breakdown">
+        <div class="report-bar-row"><span class="bar-label">医疗支出</span><div class="report-bar-track"><div class="report-bar-fill" style="width:52%"></div></div><span class="bar-pct">52%</span></div>
+        <div class="report-bar-row"><span class="bar-label">日常照护</span><div class="report-bar-track"><div class="report-bar-fill" style="width:28%"></div></div><span class="bar-pct">28%</span></div>
+        <div class="report-bar-row"><span class="bar-label">救助点运营</span><div class="report-bar-track"><div class="report-bar-fill" style="width:14%"></div></div><span class="bar-pct">14%</span></div>
+        <div class="report-bar-row"><span class="bar-label">宣传推广</span><div class="report-bar-track"><div class="report-bar-fill" style="width:6%"></div></div><span class="bar-pct">6%</span></div>
+      </div>
+      <p style="font-size:12.5px; color:var(--ink-soft); line-height:1.7; margin-bottom:18px;">以上数据为演示用途，实际救援报告会在每季度更新，并附上详细的收支明细。如需完整报告，欢迎通过客服或邮箱联系我们索取。</p>
+      <button type="button" class="btn btn-primary modal-submit" data-close>好的，知道了</button>
+    </div>
+  </div>
+
+  <!-- ADOPT INFO MODAL -->
+  <div class="modal-overlay" id="adoptInfoModal">
+    <div class="modal-box wide">
+      <button class="modal-close" data-close>&times;</button>
+      <div class="modal-head">
+        <div class="modal-icon">🐾</div>
+        <h3>领养流程</h3>
+        <p>整个流程通常需要 3-7 天，我们会全程陪着你。</p>
+      </div>
+      <ul class="info-steps">
+        <li><span class="num">1</span><span><strong>浏览等待领养的毛孩子</strong> — 在"等待领养"里找到你喜欢的它。</span></li>
+        <li><span class="num">2</span><span><strong>提交领养申请</strong> — 填写基本信息和居住情况，方便我们了解你。</span></li>
+        <li><span class="num">3</span><span><strong>沟通与见面</strong> — 志愿者会联系你，安排线上沟通或到访见面。</span></li>
+        <li><span class="num">4</span><span><strong>签署领养协议</strong> — 确认双方都准备好后，签协议接它回家。</span></li>
+        <li><span class="num">5</span><span><strong>后续跟进</strong> — 领养后我们会定期回访，随时提供帮助。</span></li>
+      </ul>
+      <button type="button" class="btn btn-primary modal-submit" id="adoptInfoStartBtn">开始申请领养</button>
+    </div>
+  </div>
+
+  <!-- VOLUNTEER INFO MODAL -->
+  <div class="modal-overlay" id="volunteerInfoModal">
+    <div class="modal-box wide">
+      <button class="modal-close" data-close>&times;</button>
+      <div class="modal-head">
+        <div class="modal-icon">🤝</div>
+        <h3>志愿者指南</h3>
+        <p>不管你有多少时间，总有一种参与方式适合你。</p>
+      </div>
+      <ul class="info-steps">
+        <li><span class="num">1</span><span><strong>日常喂养 / 清洁照护</strong> — 每周固定时间到救助点帮忙，无需专业经验。</span></li>
+        <li><span class="num">2</span><span><strong>上门探访 / 中途寄养</strong> — 在家中临时照顾等待领养的动物。</span></li>
+        <li><span class="num">3</span><span><strong>领养家访</strong> — 协助我们核实领养家庭的居住环境是否合适。</span></li>
+        <li><span class="num">4</span><span><strong>线上宣传</strong> — 帮忙拍照、写文案、转发领养信息，扩大曝光。</span></li>
+        <li><span class="num">5</span><span><strong>活动支持</strong> — 在义卖、领养日等线下活动中帮忙布置与接待。</span></li>
+      </ul>
+      <button type="button" class="btn btn-primary modal-submit" id="volunteerInfoStartBtn">立即报名</button>
+    </div>
+  </div>
+
+  <!-- FAQ MODAL -->
+  <div class="modal-overlay" id="faqModal">
+    <div class="modal-box wide">
+      <button class="modal-close" data-close>&times;</button>
+      <div class="modal-head">
+        <div class="modal-icon">❓</div>
+        <h3>常见问题</h3>
+        <p>点击问题查看答案，找不到答案也可以直接问在线客服。</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">领养需要满足什么条件？<span class="chev">⌄</span></button>
+          <div class="faq-a"><p>需要年满 18 周岁，有稳定的居住环境，并同意接受领养后的回访。第一次养宠物也没关系，我们会提供指导。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">领养需要付费吗？<span class="chev">⌄</span></button>
+          <div class="faq-a"><p>领养本身免费，但我们会收取一定的绝育/疫苗成本费（一般 100-300 元），费用会明确告知，全部用于该动物的医疗支出。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">捐款会用在哪里？<span class="chev">⌄</span></button>
+          <div class="faq-a"><p>主要用于医疗（手术、疫苗、绝育）、日常照护（食物、用品）和救助点运营，详细比例可以在"救援报告"里查看。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">志愿者有年龄或经验要求吗？<span class="chev">⌄</span></button>
+          <div class="faq-a"><p>没有硬性要求，未成年人需要监护人陪同参与。没有经验也没关系，我们会安排简单的岗前介绍。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">捡到流浪动物该怎么办？<span class="chev">⌄</span></button>
+          <div class="faq-a"><p>可以直接联系我们的客服，说明动物的位置和状况，志愿者会尽快评估并安排救助或转介到合作诊所。</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PET DETAIL MODAL -->
+  <div class="modal-overlay" id="petDetailModal">
+    <div class="modal-box pet-modal-box">
+      <button class="modal-close" data-close>&times;</button>
+      <div class="pet-detail-photo"><img id="petDetailImg" src="" alt=""></div>
+      <div class="pet-detail-head">
+        <h3 id="petDetailName"></h3>
+        <p id="petDetailMeta"></p>
+      </div>
+      <p id="petDetailBio" class="pet-detail-bio"></p>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
